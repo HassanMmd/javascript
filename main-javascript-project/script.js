@@ -73,10 +73,6 @@ function PlayRound(playerSelection, computerSelection) {
             result = `rock beat scissors you win`;
             playerWins++;
             break;
-        case `PaperRock`:
-            result = `Paper beat Rock you win`;
-            playerWins++;
-            break;
         case `PaperPaper`:
             result = `Paper equal paper`;
             break;
