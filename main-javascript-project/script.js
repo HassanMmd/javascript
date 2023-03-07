@@ -51,11 +51,11 @@ function PlayRound(playerSelection, computerSelection) {
     switch (`${playerSelection}${computerSelection}`) {
         case `PaperRock`:
             result = `paper beat rock you win`;
-            playerWins = playerWins + 1;
+            playerWins++;
             break;
         case `ScissorsRock`:
             result = `Scissors not beat rock you lose`;
-            computerWins += 1;
+            computerWins++;
             break;
         case `PaperScissors`:
             result = `paper not beat Scissor you lose`;
@@ -63,19 +63,19 @@ function PlayRound(playerSelection, computerSelection) {
             break;
         case `ScissorsPaper`:
             result = `Scissors beat paper you lose`;
-            computerWins = computerWins + 1;
+            computerWins++;
             break;
         case `RockPaper`:
             result = `rock not beat paper you lose`;
-            computerWins = computerWins + 1;
+            computerWins++;
             break;
         case `RockScissors`:
             result = `rock beat scissors you win`;
-            playerWins = playerWins + 1;
+            playerWins++;
             break;
         case `PaperRock`:
             result = `Paper beat Rock you win`;
-            playerWins = playerWins + 1;
+            playerWins++;
             break;
         case `PaperPaper`:
             result = `Paper equal paper`;
@@ -93,8 +93,8 @@ function PlayRound(playerSelection, computerSelection) {
 
 function game() {
     // reset score
-    playerWins=0;
-    computerWins=0
+    playerWins = 0;
+    computerWins = 0
 
     for (let i = 0; i < 5; i++) {
         playerSelection = playerPlay();
