@@ -46,9 +46,9 @@ function playerPlay() {
     }
 }
 
-function PlayRound(playerSeleection, computerSelection) {
+function PlayRound(playerSelection, computerSelection) {
     let result;
-    switch (`${playerSeleection}${computerSelection}`) {
+    switch (`${playerSelection}${computerSelection}`) {
         case `PaperRock`:
             result = `paper beat rock you win`;
             playerWins = playerWins + 1;
