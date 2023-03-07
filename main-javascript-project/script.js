@@ -62,8 +62,8 @@ function PlayRound(playerSelection, computerSelection) {
             computerWins++;
             break;
         case `ScissorsPaper`:
-            result = `Scissors beat paper you lose`;
-            computerWins++;
+            result = `Scissors beat paper you win`;
+            playerWins++;
             break;
         case `RockPaper`:
             result = `rock not beat paper you lose`;
