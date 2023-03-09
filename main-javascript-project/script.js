@@ -6,13 +6,13 @@ function computerPlay() {
     let randomNumber = Math.floor(Math.random() * 3);
     switch (randomNumber) {
         case 0:
-            result = "Paper";
+            result = `Paper`;
             break;
         case 1:
-            result = "Rock";
+            result = `Rock`;
             break;
         case 2:
-            result = "Scissors";
+            result = `Scissors`;
             break;
     }
     return result;
@@ -20,24 +20,24 @@ function computerPlay() {
 
 function playerPlay() {
     let result;
-    let inputText = prompt("Please choose :  Rock, Paper, Scissors");
+    let inputText = prompt(`Please choose :  Rock, Paper, Scissors`);
     let lowerInputText = inputText.toLowerCase();
     switch (lowerInputText) {
-        case "paper":
-            result = "Paper";
+        case `paper`:
+            result = `Paper`;
             break;
-        case "rock":
-            result = "Rock";
+        case `rock`:
+            result = `Rock`;
             break;
-        case "scissors":
-            result = "Scissors";
+        case `scissors`:
+            result = `Scissors`;
             break;
         default:
             result = `ERROR`
             break;
     }
     // if wrong value entered call the function again to get a correct value
-    if (result == "ERROR") {
+    if (result == `ERROR`) {
         console.log(`You entered wrong value`)
         return playerPlay();
     }
@@ -50,7 +50,7 @@ function PlayRound(playerSelection, computerSelection) {
     let result;
     switch (`${playerSelection}${computerSelection}`) {
         case `PaperRock`:
-            result = `paper beat rock you win`;
+            result = `paper beats rock you win`;
             playerWins++;
             break;
         case `ScissorsRock`:
@@ -58,11 +58,11 @@ function PlayRound(playerSelection, computerSelection) {
             computerWins++;
             break;
         case `PaperScissors`:
-            result = `paper not beat Scissor you lose`;
+            result = `paper not beat Scissors you lose`;
             computerWins++;
             break;
         case `ScissorsPaper`:
-            result = `Scissors beat paper you win`;
+            result = `Scissors beats paper you win`;
             playerWins++;
             break;
         case `RockPaper`:
@@ -70,7 +70,7 @@ function PlayRound(playerSelection, computerSelection) {
             computerWins++;
             break;
         case `RockScissors`:
-            result = `rock beat scissors you win`;
+            result = `rock beats scissors you win`;
             playerWins++;
             break;
         case `PaperPaper`:
